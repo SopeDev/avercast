@@ -1,0 +1,105 @@
+$aqua: #36B89E
+$green: #356D66
+$tabActive: #009688
+
+#menu
+	position: fixed
+	display: flex
+	-webkit-flex-direction: column
+	-ms-flex-direction: column
+	flex-direction: column
+	-webkit-justify-content: flex-end
+	justify-content: flex-end
+	top: 0
+	left: 0
+	bottom: 0
+	width: 200px
+	height: 100%
+	h2
+		height: 50px
+		padding: 10px 0
+		margin: 0
+		color: #FFF
+		text-align: center
+		text-transform: capitalize
+		cursor: pointer
+	p
+		margin: 0
+		color: #FFF
+		text-align: center
+	ul
+		padding: 0
+		margin-bottom: 0 
+		list-style-type: none
+	li
+		display: flex
+		-webkit-align-items: center
+		align-items: center
+		-webkit-justify-content: space-between
+		justify-content: space-between
+		padding: 0 20px
+		cursor: pointer
+	span
+		color: #FFF
+		text-align: right 
+	svg
+		position: absolute
+		top: -120px
+		margin: auto
+		right: 0
+		left: 0
+		transform: scale(0.5)
+		-webkit-animation: 1000ms infinite alternate float 
+		-moz-animation: 1000ms infinite alternate float 
+		-o-animation: 1000ms infinite alternate float 
+		animation: 1000ms infinite alternate float 
+	button
+		width: 100% 
+		padding: 10px 20px
+		color: #fff
+		font-family: 'Varela Round', sans-serif
+		font-size: 20px
+		background-color: $green
+		border: none
+		cursor: pointer
+		transition: all 150ms cubic-bezier(.75, 0, .25, 1)
+		&:focus
+			outline: none
+		&:hover
+			background-color: $aqua
+	.tab
+		height: 50px
+		text-align: center
+		background-color: $green
+		overflow: hidden
+		transition: all 500ms cubic-bezier(.75, 0, .25, 1)
+		> span
+			display: block
+			width: 100%
+			text-align: center
+		li
+			height: 50px
+			transition: all 150ms cubic-bezier(.75, 0, .25, 1)
+		img
+			width: 40px
+		.selected
+			background-color: $aqua
+		&.start
+			-webkit-border-top-right-radius: 5px 
+			border-top-right-radius: 5px 
+		&.active
+			height: 100%
+			background-color: $tabActive
+			h2
+				border-top: none
+				border-bottom: none  
+			& ~ .tab
+				height: 0px
+				&.set
+					height: 50px
+		&.set
+			min-height: 50px
+	.start
+		height: 0
+		&.active
+			height: 50px

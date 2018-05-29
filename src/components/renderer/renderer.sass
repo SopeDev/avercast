@@ -1,0 +1,130 @@
+$z-index-list: 1 2 3 4 5 6 7 8 9 10 11 12
+$aqua: #36B89E
+$green: #356D66
+
+#renderer
+	display: flex
+	-webkit-align-items: center
+	align-items: center
+	-webkit-justify-content: center
+	justify-content: center
+	-webkit-flex-direction: column
+	-ms-flex-direction: column
+	flex-direction: column
+	height: 100%
+	min-height: 600px
+	width: 100%
+	background-color: $aqua
+	.screen
+		display: flex
+		-webkit-flex-direction: column-reverse
+		-ms-flex-direction: column-reverse
+		-webkit-align-items: center
+		align-items: center
+		flex-direction: column-reverse
+		-webkit-justify-content: space-around
+		justify-content: space-around
+		-webkit-animation: 1000ms infinite alternate float
+		-moz-animation: 1000ms infinite alternate float
+		-o-animation: 1000ms infinite alternate float
+		animation: 1000ms infinite alternate float
+		&.sent
+			-webkit-animation: none 
+			-moz-animation: none 
+			-o-animation: none 
+			animation: none
+		@each $current-index in $z-index-list
+			$i: index($z-index-list, $current-index)
+			.ingredient:nth-child(#{$i})
+				z-index: $current-index
+		.ingredient
+			width: 22vw 
+			margin: -11vw 0
+			-webkit-user-select: none
+			-moz-user-select: none
+			-ms-user-select: none
+			user-select: none
+			img		
+				width: 100%
+	.plate
+		width: 40vw
+		margin: -20vw 0
+		img
+			width: 100%
+	.title
+		height: 50px
+		margin: 0 0 -50px
+		color: #fff
+		font-size: 2.5vw
+		text-shadow: 2px 2px 4px rgba(#000, 0.1)
+		text-align: center
+		transform: translate3d(0, -100px, 0)
+	.order
+		position: absolute
+		display: flex
+		-webkit-flex-direction: column
+		-ms-flex-direction: column
+		flex-direction: column
+		-webkit-align-items: center
+		align-items: center
+		-webkit-justify-content: center
+		justify-content: center 
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		background-color: rgba(#000, 0.5) 
+		z-index: 10
+		.order-title
+			color: #FFF
+			margin: 0 0 100px  
+			font-size: 2.5vw
+			text-align: center
+		.ordering
+			color: #FFF
+			margin: 0 
+			font-size: 3vw
+			text-align: center
+		.order-buttons
+			display: flex
+			-webkit-justify-content: space-between
+			justify-content: space-between
+			button
+				width: 150px
+				height: 50px  
+				color: #fff
+				font-family: 'Varela Round', sans-serif
+				font-size: 20px
+				text-align: center
+				background-color: $aqua
+				border: none
+				-webkit-border-radius: 10px 
+				border-radius: 10px 
+				cursor: pointer
+				&:focus
+					outline: none
+				& + button
+					margin-left: 50px
+	.enjoy
+		position: absolute
+		top: 15vh
+		margin: auto
+		color: #fff
+		font-size: 4vw
+		text-align: center
+		-webkit-animation: 1000ms 1 enjoy both 
+		-moz-animation: 1000ms 1 enjoy both 
+		-o-animation: 1000ms 1 enjoy both 
+		animation: 1000ms 1 enjoy both		
+	.error
+		position: absolute
+		top: 15vh
+		margin: auto
+		color: #ffeb3b
+		font-size: 2vw
+		text-shadow: 2px 2px 4px rgba(#000, 0.1)
+		text-align: center
+		-webkit-animation: 3000ms 1 error both 
+		-moz-animation: 3000ms 1 error both 
+		-o-animation: 3000ms 1 error both 
+		animation: 3000ms 1 error both

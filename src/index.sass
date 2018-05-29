@@ -1,3 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round')
+
+@keyframes float
+	0%
+		transform: translate3d(0, 10px, 0)
+	100%
+		transform: translate3d(0, -10px, 0)
+@keyframes error
+	0%
+		opacity: 0
+		transform: translate3d(0, -10px, 0)
+	25%
+		opacity: 1
+		transform: translate3d(0, 0, 0)
+	75%
+		opacity: 1
+		transform: translate3d(0, 0, 0)
+	100%
+		opacity: 0
+		transform: translate3d(0, 10px, 0)
+@keyframes enjoy
+	0%
+		opacity: 0
+		transform: translate3d(0, -10px, 0)
+	100%
+		opacity: 1
+		transform: translate3d(0, 0, 0)
+
 *,
 *:before,
 *:after
@@ -12,3 +40,11 @@ html, body
 	box-sizing: border-box
 body
 	margin: 0
+	font-family: 'Varela Round', sans-serif
+#layout
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	overflow: hidden

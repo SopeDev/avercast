@@ -19,6 +19,7 @@ module.exports = (env, argv) => {
 							loader: 'url-loader',
 							options: {
 								limit: 10000,
+								publicPath: '/avercast/',
 								name: 'images/[hash]-[name].[ext]'
 							}
 						}

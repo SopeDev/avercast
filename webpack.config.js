@@ -39,7 +39,7 @@ module.exports = (env, argv) => {
 		},
 		output: {
 			path: __dirname + '/docs',
-			publicPath: '/',
+			publicPath: '/avercast',
 			filename: 'bundle.js'
 		},
 		plugins: [

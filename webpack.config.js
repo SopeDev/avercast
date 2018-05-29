@@ -20,7 +20,7 @@ module.exports = (env, argv) => {
 							options: {
 								limit: 10000,
 								publicPath: '/avercast/',
-								name: 'images/[hash]-[name].[ext]'
+								name: '/images/[hash]-[name].[ext]'
 							}
 						}
 					]
